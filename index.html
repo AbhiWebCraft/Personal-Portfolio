@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personal portfolio website</title>
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/6d4e9a53b1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="logo.png" class="logo">
+                <img id="logo" src="logo-white.png">
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    <li id="text-color"><a href="#header">Home</a></li>
+                    <li id="text-color"><a href="#about">About Me</a></li>
+                    <li id="text-color"><a href="#services">Services</a></li>
+                    <li id="text-color"><a href="#portfolio">Portfolio</a></li>
+                    <li id="text-color"><a href="#contact">Contact Me</a></li>
                     <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-caret-down" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
-                <h1>Hi, I'm <span>Abhishek Kumar</span><br>From Jamshedpur</h1>
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Abhishek Kumar</span><br>From Jamshedpur</h1> 
+                <div class="toggle-container">
+                    <label class="switch">
+                      <input type="checkbox" id="modeSwitch">
+                      <span class="slider round"></span>
+                    </label>
+                    <p id="modeText">Switch to change Mode</p>
             </div>
         </div>
     </div>
-    <!-- ---------------------------------------------------about ------------------------------------------------------------------------------------------------->
+    <!---------------------------------about ------------------------------------------------------------>
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="user.png" alt="">
+                    <img src="User2.jpeg" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia at voluptatibus dignissimos, iusto facere voluptate assumenda natus maxime excepturi quod fuga vero minus itaque nisi? Consequatur architecto fugiat consequuntur itaque.</p>
+                    <p>I am a passionate full stack developer with a strong foundation in web development, Api handling blockchain. My projects range from smart home systems to decentralized applications (DApps), demonstrating my ability to learn and adapt to new technologies. With a BCA degree and experience in tools like React, Node.js, Docker, and Arduino, I am committed to creating innovative solutions that blend creativity and functionality. I'm always eager to explore emerging technologies and build impactful applications.</p>
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -46,23 +52,25 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>UI/UX</span><br>Desiging Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Andriod/iOS apps</li>
+                            <li><span>Language</span><br>Javascript, Java, Solidity </li>
+                            <li><span>Frontend</span><br>HTML, CSS, Tailwind Css</li>
+                            <li><span>Libraries & FrameWorks</span><br>React, Ether.js</li>
+                            <li><span>Database</span><br/>SQL, MySQL, </li>
+                            <li><span>AWS Services</span><br/>IAM, EC2, S3, loadBalancer, Auto scaling group</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Woked In different Projects</span><br>Desiging Web/App interfaces</li>
+                            <li><span>Worked In different Projects</span><br>Desiging Web/App interfaces</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                             <li><span>App Development</span><br>Building Andriod/iOS apps</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="eduction">
                         <ul>
-                            <li><span>UI/UX</span><br>Desiging Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Andriod/iOS apps</li>
+                            <li><span>BCA</span><br>Doon Business School, Dehradun</li>
+                            <li><span>12th </span><br>Bihar NIOS Board</li>
+                            <li><span>Certification</span><br>Amazon Web Service (AWS)</li>
                         </ul>
                     </div>
                 </div>
@@ -77,19 +85,19 @@
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Developent</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam maiores deserunt tenetur laudantium architecto doloribus tempore accusantium cumque inventore repellat, ratione eius harum numquam cupiditate officiis odit totam dolorum consequatur.</p>
+                    <p>As a web developer, I specialize in creating responsive, user-friendly websites using modern technologies like HTML, CSS, JavaScript, and React. I ensure seamless performance across devices, focusing on both front-end aesthetics and back-end functionality to deliver customized solutions tailored to meet client goals and needs.</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam maiores deserunt tenetur laudantium architecto doloribus tempore accusantium cumque inventore repellat, ratione eius harum numquam cupiditate officiis odit totam dolorum consequatur.</p>
+                    <h2>Full Stack Development</h2>
+                    <p>As a full stack developer, I handle both front-end and back-end development, building comprehensive web applications. From crafting intuitive user interfaces to designing robust server-side logic, I use tools like React, Node.js, and databases to create dynamic, scalable solutions tailored to client requirements.</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store-ios"></i>
-                    <h2>Web Application</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam maiores deserunt tenetur laudantium architecto doloribus tempore accusantium cumque inventore repellat, ratione eius harum numquam cupiditate officiis odit totam dolorum consequatur.</p>
+                    <h2>Mobile Application</h2>
+                    <p>As a mobile app developer, I create intuitive, high-performance applications for iOS and Android. Leveraging technologies like React Native and Flutter, I focus on delivering seamless user experiences with responsive designs and efficient functionality, ensuring that apps run smoothly across various devices and meet client objectives.</p>
                     <a href="#">Learn More</a>
                 </div>
             </div>
@@ -103,19 +111,19 @@
                 <div class="work">
                     <img src="work-1.png">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The App Connects you to talented people around the world.
-                            Download it from play store.</p>
-                            <a href="#"><i class="fa-solid fa-anchor"></i></a>
+                        <h3>Smart Response AI Chat-bot</h3>
+                        <p>This is an chatbot which solves user query,
+                            click to interact with it.</p>
+                            <a href="https://github.com/AbhiWebCraft/SmartResponse-AI-assistant-System"><i class="fa-solid fa-anchor"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="work-2.png">
                     <div class="layer">
-                        <h3>Music App</h3>
+                        <h3>logistic Management System on Blockchain</h3>
                         <p>The App Connects you to talented people around the world.
                             Download it from play store.</p>
-                            <a href="#"><i class="fa-solid fa-anchor"></i></a>
+                            <a href="https://github.com/AbhiWebCraft/Logistics-Management-System-on-blockchain"><i class="fa-solid fa-anchor"></i></a>
                     </div>
             </div>
             <div class="work">
@@ -128,7 +136,7 @@
                 </div>
         </div>
     </div>
-    <a href="#" class="btn">See More</a>
+    <a href="#" id='btn-text' class="btn">See More</a>
     <!-- -----------------------------------------------------------contact form---------------------------------- -->
     <div id="contact">
         <div class="container">
@@ -141,7 +149,7 @@
                         <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                         <a href=""><i class="fa-solid fa-x"></i></a>
                         <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/abhishek-kumar-333a50255/"><i class="fa-brands fa-linkedin"></i></a>
 
                     </div>
                     <a href="Abhishek Kumar Resume.pdf" download class="btn btn2">Download CV</a>
@@ -159,7 +167,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>dkkwagfkdbkjsabkjv bjcdj<i class="fa-solid fa-heart"></i> ncakwjbewka</p>
+        <p>Thank you for Scrolling <i class="fa-solid fa-heart"></i> with love Abhishek</p>
     </div>
     <script>
 
@@ -196,6 +204,36 @@
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         })
+      </script>
+      <script>
+          
+            const modeSwitch = document.getElementById('modeSwitch');
+            const logo = document.getElementById('logo');
+            const body = document.querySelector('body');
+            const text_color = document.getElementById('text-color');
+            let btn = document.getElementById('btn-text')
+
+            modeSwitch.addEventListener('change', () => {
+            if (modeSwitch.checked) {
+             // Enable dark mode
+             body.style.backgroundColor = 'white';  // Dark background
+             body.style.color = 'black';      // Light text color
+             logo.src = 'logo-black.png';  
+             btn.style.color = 'black'    // Dark mode logo
+            } else {
+            // Revert to light mode (default state)
+             body.style.backgroundColor = '';         // Default background
+             body.style.color = '';             // Default text color
+             logo.src = 'logo-white.png';     // Light mode logo (or revert to default logo)
+             btn.style.color='';
+            }
+            });
+
+            console.log(navtext)
+
+
+
+
       </script>
 </body>
 </html>
