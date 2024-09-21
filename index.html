@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personal portfolio website</title>
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/6d4e9a53b1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,18 +27,18 @@
                 <h1>Hi, I'm <span>Abhishek Kumar</span><br>From Jamshedpur</h1> 
                 <div class="toggle-container">
                     <label class="switch">
-                      <input type="checkbox" id="modeSwitch">
-                      <span class="slider round"></span>
+                        <input type="checkbox" id="modeSwitch">
+                        <span class="slider round"></span>
                     </label>
                     <p id="modeText">  Dark Mode</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!---------------------------------about ------------------------------------------------------------>
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
+        <!---------------------------------about ------------------------------------------------------------>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
                     <img src="User2.jpeg" alt="">
                 </div>
                 <div class="about-col-2">
@@ -48,12 +47,13 @@
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('eduction')">Eduction</p>
+                        <p class="tab-links" onclick="opentab('eduction')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Language</span><br>Javascript, Java, Solidity </li>
+                            <li><span>Languages</span><br>Javascript, Java, Solidity </li>
                             <li><span>Frontend</span><br>HTML, CSS, Tailwind Css</li>
+                            <li><span>Backend</span><br/>Node.js</li>
                             <li><span>Libraries & FrameWorks</span><br>React, Ether.js</li>
                             <li><span>Database</span><br/>SQL, MySQL, </li>
                             <li><span>AWS Services</span><br/>IAM, EC2, S3, loadBalancer, Auto scaling group</li>
@@ -106,39 +106,41 @@
     <!-- -------------------------------------Portfolio---------------------------------- -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title">My Projects</h1>
             <div class="work-list">
                 <div class="work">
+                    <!-- <p>Click Here to Checkout The Project</p> -->
                     <img src="work-1.png">
+                    <p></p>
                     <div class="layer">
                         <h3>Smart Response AI Chat-bot</h3>
                         <p>This is an chatbot which solves user query,
                             click to interact with it.</p>
                             <a href="https://github.com/AbhiWebCraft/SmartResponse-AI-assistant-System"><i class="fa-solid fa-anchor"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="work">
+                    <div class="work">
                     <img src="work-2.png">
                     <div class="layer">
                         <h3>logistic Management System on Blockchain</h3>
                         <p>The App Connects you to talented people around the world.
                             Download it from play store.</p>
                             <a href="https://github.com/AbhiWebCraft/Logistics-Management-System-on-blockchain"><i class="fa-solid fa-anchor"></i></a>
+                        </div>
                     </div>
-            </div>
-            <div class="work">
-                <img src="work-3.png">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The App Connects you to talented people around the world.
-                        Download it from play store.</p>
-                        <a href="#"><i class="fa-solid fa-anchor"></i></a>
-                </div>
-        </div>
-    </div>
-    <a href="#" id='btn-text' class="btn">See More</a>
-    <!-- -----------------------------------------------------------contact form---------------------------------- -->
-    <div id="contact">
+                    <div class="work">
+                        <img src="work-3.png">
+                        <div class="layer">
+                            <h3>Online Shopping App</h3>
+                            <p>The App Connects you to talented people around the world.
+                                Download it from play store.</p>
+                                <a href="#"><i class="fa-solid fa-anchor"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" id='btn-text' class="btn">See More</a>
+                    <!-- -----------------------------------------------------------contact form---------------------------------- -->
+                    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -150,7 +152,7 @@
                         <a href=""><i class="fa-solid fa-x"></i></a>
                         <a href=""><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/abhishek-kumar-333a50255/"><i class="fa-brands fa-linkedin"></i></a>
-
+                        
                     </div>
                     <a href="Abhishek Kumar Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
@@ -162,81 +164,70 @@
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
-
+                
             </div>
         </div>
     </div>
     <div class="copyright">
-        <p>Thank you for Scrolling <i class="fa-solid fa-heart"></i> with love Abhishek</p>
+        <p>Thank you for Scrolling <i class="fa-solid fa-heart"></i> Abhishek Kumar</p>
     </div>
     <script>
-
         var tablinks= document.getElementsByClassName("tab-links");
-        var tabcontents= document.getElementsByClassName("tab-contents");
+var tabcontents= document.getElementsByClassName("tab-contents");
 
-        function opentab (tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-        var sidemenu = document.getElementById("sidemenu");
+function opentab (tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+var sidemenu = document.getElementById("sidemenu");
 
-        function openmenu() {
-            sidemenu.style.right= "0";
-        }
-        function closemenu() {
-            sidemenu.style.right= "-200px";
-        }
-        
+function openmenu() {
+    sidemenu.style.right= "0";
+}
+function closemenu() {
+    sidemenu.style.right= "-200px";
+}
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwSX7y3J5j1bCNmN8nb4saxNyePVlKzgNWC95RX4UZDP8GApQYhhJykNRCWpcCLhGh2/exec'
+const form = document.forms['submit-to-google-sheet']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
+
+const modeSwitch = document.getElementById('modeSwitch');
+const logo = document.getElementById('logo');
+const body = document.querySelector('body');
+const text_color = document.getElementById('text-color');
+let btn = document.getElementById('btn-text')
+const modeText = document.getElementById('modeText');
+
+modeSwitch.addEventListener('change', () => {
+if (modeSwitch.checked) {
+ // Enable dark mode
+ body.style.backgroundColor = 'white';  // Dark background
+ body.style.color = 'black';      // Light text color
+ logo.src = 'logo-black.png';  
+ btn.style.color = 'black'    // Dark mode logo
+ modeText.textContent = 'Light Mode';
+} else {
+// Revert to light mode (default state)
+ body.style.backgroundColor = '';         // Default background
+ body.style.color = '';             // Default text color
+ logo.src = 'logo-white.png';     // Light mode logo (or revert to default logo)
+ btn.style.color='';
+ modeText.textContent = 'Dark Mode';
+}
+});
     </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSX7y3J5j1bCNmN8nb4saxNyePVlKzgNWC95RX4UZDP8GApQYhhJykNRCWpcCLhGh2/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-      <script>
-          
-            const modeSwitch = document.getElementById('modeSwitch');
-            const logo = document.getElementById('logo');
-            const body = document.querySelector('body');
-            const text_color = document.getElementById('text-color');
-            let btn = document.getElementById('btn-text')
-            const modeText = document.getElementById('modeText');
-
-            modeSwitch.addEventListener('change', () => {
-            if (modeSwitch.checked) {
-             // Enable dark mode
-             body.style.backgroundColor = 'white';  // Dark background
-             body.style.color = 'black';      // Light text color
-             logo.src = 'logo-black.png';  
-             btn.style.color = 'black'    // Dark mode logo
-             modeText.textContent = 'Light Mode';
-            } else {
-            // Revert to light mode (default state)
-             body.style.backgroundColor = '';         // Default background
-             body.style.color = '';             // Default text color
-             logo.src = 'logo-white.png';     // Light mode logo (or revert to default logo)
-             btn.style.color='';
-             modeText.textContent = 'Dark Mode';
-            }
-            });
-
-            console.log(navtext)
-
-
-
-
-      </script>
 </body>
 </html>
