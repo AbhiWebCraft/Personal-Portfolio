@@ -50,11 +50,12 @@ nav ul li a:hover::after{
     width: 100%;
 }
 nav ul li a {
-    color: #0695f5;
+    color: #d9f506;
     text-decoration: none; 
     font-size: 18px;
     position: relative;
 }
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
@@ -72,9 +73,10 @@ nav ul li a {
     margin-top: 5px;
     /* color:#fff; */
 }
-.header-text h1 span{
+.header-text h1 span {
     color: red;
 }
+
 /* ------------------About---------------------- */
 #about{
     padding: 80px 0;
@@ -336,6 +338,9 @@ nav .fa-solid{
     .header-text h1{
         font-size: 30px;
     }
+    .header-text h1 span {
+        font-size: 22px;
+    }
     .toggle-container{
         margin-top: 3px;
         padding: 0px;
@@ -349,7 +354,7 @@ nav .fa-solid{
         font-size: 25px;
     }
     nav ul{
-        background: #43f163;
+        background: #000000;
         position: fixed;
         top: 0;
         right: -200px;
