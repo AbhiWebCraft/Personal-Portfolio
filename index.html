@@ -43,7 +43,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am a passionate full stack developer with a strong foundation in web development, Api handling blockchain. My projects range from smart home systems to decentralized applications (DApps), demonstrating my ability to learn and adapt to new technologies. With a BCA degree and experience in tools like React, Node.js, Docker, and Arduino, I am committed to creating innovative solutions that blend creativity and functionality. I'm always eager to explore emerging technologies and build impactful applications.</p>
+                    <p class="text-justify">I am a passionate full stack developer with a strong foundation in web development, Api handling blockchain. My projects range from smart home systems to decentralized applications (DApps), demonstrating my ability to learn and adapt to new technologies. With a BCA degree and experience in tools like React, Node.js, Docker, and Arduino, I am committed to creating innovative solutions that blend creativity and functionality. I'm always eager to explore emerging technologies and build impactful applications.</p>
                     <div class="tab-title">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -85,19 +85,19 @@
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Developent</h2>
-                    <p>As a web developer, I specialize in creating responsive, user-friendly websites using modern technologies like HTML, CSS, JavaScript, and React. I ensure seamless performance across devices, focusing on both front-end aesthetics and back-end functionality to deliver customized solutions tailored to meet client goals and needs.</p>
+                    <p class="text-justify">As a web developer, I specialize in creating responsive, user-friendly websites using modern technologies like HTML, CSS, JavaScript, and React. I ensure seamless performance across devices, focusing on both front-end aesthetics and back-end functionality to deliver customized solutions tailored to meet client goals and needs.</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
                     <h2>Full Stack Development</h2>
-                    <p>As a full stack developer, I handle both front-end and back-end development, building comprehensive web applications. From crafting intuitive user interfaces to designing robust server-side logic, I use tools like React, Node.js, and databases to create dynamic, scalable solutions tailored to client requirements.</p>
+                    <p class="text-justify">As a full stack developer, I handle both front-end and back-end development, building comprehensive web applications. From crafting intuitive user interfaces to designing robust server-side logic, I use tools like React, Node.js, and databases to create dynamic, scalable solutions tailored to client requirements.</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store-ios"></i>
                     <h2>Mobile Application</h2>
-                    <p>As a mobile app developer, I create intuitive, high-performance applications for iOS and Android. Leveraging technologies like React Native and Flutter, I focus on delivering seamless user experiences with responsive designs and efficient functionality, ensuring that apps run smoothly across various devices and meet client objectives.</p>
+                    <p class="text-justify">As a mobile app developer, I create intuitive, high-performance applications for iOS and Android. Leveraging technologies like React Native and Flutter, I focus on delivering seamless user experiences with responsive designs and efficient functionality, ensuring that apps run smoothly across various devices and meet client objectives.</p>
                     <a href="#">Learn More</a>
                 </div>
             </div>
@@ -185,13 +185,18 @@ function opentab (tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+
 var sidemenu = document.getElementById("sidemenu");
+let navScreen = document.querySelector('.container')
 
 function openmenu() {
-    sidemenu.style.right= "0";
+    sidemenu.style.top= "0";
+     navScreen.style.top = "200px"
 }
 function closemenu() {
-    sidemenu.style.right= "-200px";
+    sidemenu.style.top= "-100%";
+    navScreen.style.top = "0"
 }
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwSX7y3J5j1bCNmN8nb4saxNyePVlKzgNWC95RX4UZDP8GApQYhhJykNRCWpcCLhGh2/exec'

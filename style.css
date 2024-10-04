@@ -16,6 +16,11 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+.text-justify {
+    text-align: justify;
+}
+
 .container{
     padding: 10px 10px;
 }
@@ -50,7 +55,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 nav ul li a {
-    color: #d9f506;
+    color: #f50606;
     text-decoration: none; 
     font-size: 18px;
     position: relative;
@@ -74,7 +79,7 @@ nav ul li a {
     /* color:#fff; */
 }
 .header-text h1 span {
-    color: red;
+    color: #f50606;
 }
 
 /* ------------------About---------------------- */
@@ -120,7 +125,7 @@ nav ul li a {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #ff004f;
+    background-color: #f50606;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -135,7 +140,7 @@ nav ul li a {
 
 }
 .tab-contents ul li span{
-    color: #d70f0f;
+    color: #f50606;
     font-size: 18px;
 }
 .tab-contents{
@@ -179,7 +184,7 @@ nav ul li a {
     display: inline-block;
 }
 .services-list div:hover{
-    background-color: #ff004f;
+    background-color: #f50606;
     transform: translateY(-10px);
 }
 /* ------------------------------------------------------------------------------------------ */
@@ -206,7 +211,7 @@ nav ul li a {
 .layer{
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #f50606);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -216,6 +221,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     flex-direction:  column;
+    color: white;
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
@@ -227,7 +233,7 @@ nav ul li a {
 }
 .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #f50606;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -247,7 +253,7 @@ nav ul li a {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #f50606;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -255,7 +261,7 @@ nav ul li a {
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #ff004f;
+    background: #f50606;
 
 }
 /* ----------------------------------------contact-------------- */
@@ -269,7 +275,7 @@ nav ul li a {
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: #f50606;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -285,12 +291,12 @@ nav ul li a {
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: #f50606;
     transform: translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: #f50606;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .contact-right form{
@@ -330,97 +336,125 @@ nav .fa-regular{
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 600px){
-    .header-text{
+@media only screen and (max-width: 600px) {
+    .header-text {
         margin-top: 100%;
         font-size: 30px;
     }
-    .header-text h1{
+
+    .header-text h1 {
         font-size: 30px;
     }
+
     .header-text h1 span {
         font-size: 22px;
     }
-    .toggle-container{
+
+    .toggle-container {
         margin-top: 3px;
         padding: 0px;
     }
-    nav .fa-regular{
+
+    nav .fa-regular {
+        display: block;
+        font-size: 25px;
+        color: white;
+    }
+
+    nav .fa-solid {
         display: block;
         font-size: 25px;
     }
-    nav .fa-solid{
-        display: block;
-        font-size: 25px;
+    nav {
+        position: absolute;
+        top: 0;  /* Default position */
+        width: 100%;
+        z-index: 1;  /* Ensure it's below the menu in z-index */
+        transition: top 0.5s;  /* Smooth transition for nav */
     }
-    nav ul{
+
+    nav ul {
         background: #000000;
         position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
+        top: -100%; /* Initially hides the menu above the viewport */
+        right: 0;
+        width: 100%;
+        border-bottom-left-radius: 20px;
+        max-height: 100vh; /* Let the height expand to fit the screen */
+        overflow: auto; /* If content exceeds the height, it becomes scrollable */
+        padding-top: 10px;
         z-index: 2;
-        transition: right 0.5s;
+        transition: top 0.5s; /* Smooth sliding effect */
     }
-    nav ul li{
-        display: block;
+    
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 25px;
     }
+
     nav ul .fa-regular {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }    
-    .sub-title{
+
+    .sub-title {
         font-size: 40px;
     }
-    .about-col-1, .about-col-2{
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    .about-col-1, .about-col-2 {
         flex-basis: 100%;
     }
-    .about-col-1{
+
+    .about-col-1 {
         margin-bottom: 30px;
     }
-    .about-col-2{
+
+    .about-col-2 {
         font-size: 14px;
     }
-    .tab-links{
+
+    .tab-links {
         font-size: 16px;
         margin-right: 20px;
     }
-    .contact-left, .contact-right{
-        flex-basis: 100%;
 
+    .contact-left, .contact-right {
+        flex-basis: 100%;
     }
-    .copyright{
+
+    .copyright {
         font-size: 14px;
     }
 }
 
-
-
-
+/* Toggle switch styles */
 .toggle-container {
     display: flex;
     align-items: center;
-  }
-  
-  .switch {
+}
+
+.switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  .switch input {
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -430,9 +464,9 @@ nav .fa-solid{
     background-color: #ccc;
     transition: .4s;
     border-radius: 34px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -442,20 +476,20 @@ nav .fa-solid{
     background-color: white;
     transition: .4s;
     border-radius: 50%;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked + .slider {
     background-color: #2196F3;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked + .slider:before {
     transform: translateX(26px);
-  }
-  
-  .slider.round {
+}
+
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}
