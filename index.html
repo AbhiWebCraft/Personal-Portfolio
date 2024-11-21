@@ -10,7 +10,7 @@
 <body>
     <div id="header">
         <div class="container">
-            <nav>
+            <nav id="nav">
                 <img id="logo" src="logo-white.png">
                 <ul id="sidemenu">
                     <li id="text-color"><a href="#header">Home</a></li>
@@ -215,6 +215,8 @@ const body = document.querySelector('body');
 const text_color = document.getElementById('text-color');
 let btn = document.getElementById('btn-text')
 const modeText = document.getElementById('modeText');
+const navBgcolor = document.getElementById('nav')
+const sideMenu = document.getElementById('sidemenu')
 
 modeSwitch.addEventListener('change', () => {
 if (modeSwitch.checked) {
@@ -223,6 +225,8 @@ if (modeSwitch.checked) {
  body.style.color = 'black';      // Light text color
  logo.src = 'logo-black.png';  
  btn.style.color = 'black'    // Dark mode logo
+ navBgcolor.style.backgroundColor = 'white'
+ sideMenu.style.backgroundColor = 'white'
  modeText.textContent = 'Light Mode';
 } else {
 // Revert to light mode (default state)
@@ -230,6 +234,8 @@ if (modeSwitch.checked) {
  body.style.color = '';             // Default text color
  logo.src = 'logo-white.png';     // Light mode logo (or revert to default logo)
  btn.style.color='';
+ navBgcolor.style.backgroundColor = 'black'
+ sideMenu.style.backgroundColor = 'black'
  modeText.textContent = 'Dark Mode';
 }
 });
