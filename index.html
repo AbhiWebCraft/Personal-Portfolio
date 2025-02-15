@@ -18,9 +18,9 @@
                     <li id="text-color"><a href="#services">Services</a></li>
                     <li id="text-color"><a href="#portfolio">Portfolio</a></li>
                     <li id="text-color"><a href="#contact">Contact Me</a></li>
-                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                    <i class="fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
                 </ul>
-                <i class="fa-solid fa-caret-down" onclick="openmenu()"></i>
+                <i class="fa-solid fa-caret-down" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full Stack Developer</p>
@@ -157,9 +157,10 @@
                     <a href="Abhishek Kumar Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b4b56f4e-f8fe-4e14-b9ee-fa14ebec2b80"/>
                         <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" namr="e-mail" placeholder="Your Email" required>
+                        <input type="email" name="e-mail" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -190,24 +191,14 @@ function opentab (tabname){
 var sidemenu = document.getElementById("sidemenu");
 let navScreen = document.querySelector('.container')
 
-function openmenu() {
+function openMenu() {
     sidemenu.style.top= "0";
      navScreen.style.top = "200px"
 }
-function closemenu() {
+function closeMenu() {
     sidemenu.style.top= "-100%";
     navScreen.style.top = "0"
 }
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwSX7y3J5j1bCNmN8nb4saxNyePVlKzgNWC95RX4UZDP8GApQYhhJykNRCWpcCLhGh2/exec'
-const form = document.forms['submit-to-google-sheet']
-
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
-})
 
 const modeSwitch = document.getElementById('modeSwitch');
 const logo = document.getElementById('logo');
