@@ -12,25 +12,29 @@
         <div class="container">
             <nav id="nav">
                 <img id="logo" src="logo-white.png">
-                <ul id="sidemenu">
-                    <li id="text-color"><a href="#header">Home</a></li>
-                    <li id="text-color"><a href="#about">About Me</a></li>
-                    <li id="text-color"><a href="#services">Services</a></li>
-                    <li id="text-color"><a href="#portfolio">Portfolio</a></li>
-                    <li id="text-color"><a href="#contact">Contact Me</a></li>
-                    <i class="fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
-                </ul>
+                <div class="nav-right">
+                    <div class="toggle-container">
+                        <label class="switch">
+                            <input type="checkbox" id="modeSwitch">
+                            <span class="slider round"></span>
+                        </label>
+                        <!-- <p id="modeText">  Dark Mode</p> -->
+                    </div>
+                    <ul id="sidemenu">
+                        <li id="text-color"><a href="#header">Home</a></li>
+                        <li id="text-color"><a href="#about">About Me</a></li>
+                        <li id="text-color"><a href="#services">Services</a></li>
+                        <li id="text-color"><a href="#portfolio">Portfolio</a></li>
+                        <li id="text-color"><a href="#contact">Contact Me</a></li>
+                        <i class="fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
+                    </ul>
+                </div>
                 <i class="fa-solid fa-caret-down" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Full Stack Developer</p>
-                <h1>Hi, I'm <span>Abhishek Kumar</span><br>From Jamshedpur</h1> 
-                <div class="toggle-container">
-                    <label class="switch">
-                        <input type="checkbox" id="modeSwitch">
-                        <span class="slider round"></span>
-                    </label>
-                    <p id="modeText">  Dark Mode</p>
+                <p class="typewriter">Full Stack Developer</p>
+                <div class="marquee">
+                    <h1>Hi, I'm <span>Abhishek Kumar</span><br>From Jamshedpur</h1>
                 </div>
             </div>
         </div>
@@ -61,9 +65,16 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Worked In different Projects</span><br>Desiging Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Andriod/iOS apps</li>
+                            <li><span class="company">Prep Monster <span class="status">Working</span> </span>
+                                <br> <span> • </span>
+                                Developed and maintained responsive UI components using React.js, TypeScript, Firebase, and Vite for an AI-powered NEET preparation platform, improving overall user experience across mobile and desktop.
+                                <br> <span> • </span>
+                                Implemented Firebase Authentication with Google Sign-In, Email/Password login, and Email verification, enhancing user security and reducing sign-in errors by 25%.
+                                <br> <span> • </span>
+                                Integrated Razorpay payment gateway with backend verification to enable seamless and secure transactions, improving payment success rates and user trust.
+                                <br> <span> • </span>
+                                Connected and tested multiple RESTful APIs for real-time analytics and user progress tracking, boosting data accuracy and feature reliability across the platform.
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="eduction">
