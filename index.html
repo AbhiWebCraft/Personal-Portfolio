@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personal portfolio website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/6d4e9a53b1.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark-mode">
     <div id="header">
         <div class="container">
             <nav id="nav">
                 <img id="logo" src="logo-white.png">
                 <div class="nav-right">
                     <div class="toggle-container">
-                        <label class="switch">
-                            <input type="checkbox" id="modeSwitch">
-                            <span class="slider round"></span>
-                        </label>
-                        <!-- <p id="modeText">  Dark Mode</p> -->
-                    </div>
+    <i id="themeIcon" class="fas fa-sun theme-icon"></i>
+</div>
                     <ul id="sidemenu">
                         <li id="text-color"><a href="#header">Home</a></li>
                         <li id="text-color"><a href="#about">About Me</a></li>
@@ -32,7 +29,7 @@
                 <i class="fa-solid fa-caret-down" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
-                <p class="typewriter">Full Stack Developer</p>
+                <hi class="typewriter">Full Stack <span class="textspan">Developer</span></hi>
                 <div class="marquee">
                     <h1>Hi, I'm <span>Abhishek Kumar</span><br>From Jamshedpur</h1>
                 </div>
@@ -210,36 +207,43 @@ function closeMenu() {
     navScreen.style.top = "0"
 }
 
-const modeSwitch = document.getElementById('modeSwitch');
-const logo = document.getElementById('logo');
-const body = document.querySelector('body');
-const text_color = document.getElementById('text-color');
+// const modeSwitch = document.getElementById('modeSwitch');
+// const logo = document.getElementById('logo');
+// const body = document.querySelector('body');
+// const text_color = document.getElementById('text-color');
 let btn = document.getElementById('btn-text')
-const modeText = document.getElementById('modeText');
-const navBgcolor = document.getElementById('nav')
-const sideMenu = document.getElementById('sidemenu')
+// // const modeText = document.getElementById('modeText');
+// const navBgcolor = document.getElementById('nav')
+// const sideMenu = document.getElementById('sidemenu')
 
-modeSwitch.addEventListener('change', () => {
-if (modeSwitch.checked) {
- // Enable dark mode
- body.style.backgroundColor = 'white';  // Dark background
- body.style.color = 'black';      // Light text color
- logo.src = 'logo-black.png';  
- btn.style.color = 'black'    // Dark mode logo
- navBgcolor.style.backgroundColor = 'white'
- sideMenu.style.backgroundColor = 'white'
- modeText.textContent = 'Light Mode';
-} else {
-// Revert to light mode (default state)
- body.style.backgroundColor = '';         // Default background
- body.style.color = '';             // Default text color
- logo.src = 'logo-white.png';     // Light mode logo (or revert to default logo)
- btn.style.color='';
- navBgcolor.style.backgroundColor = 'black'
- sideMenu.style.backgroundColor = 'black'
- modeText.textContent = 'Dark Mode';
-}
+const themeIcon = document.getElementById('themeIcon');
+const body = document.body;
+
+themeIcon.addEventListener('click', () => {
+
+  if (body.classList.contains('dark-mode')) {
+
+    // SWITCH TO LIGHT
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+
+    logo.src = 'logo-black.png';
+    btn.style.color='black';
+    themeIcon.classList.replace('fa-sun','fa-moon');
+
+  } else {
+
+    // SWITCH TO DARK
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+
+    logo.src = 'logo-white.png';
+    btn.style.color='';
+    themeIcon.classList.replace('fa-moon','fa-sun');
+  }
 });
+
+
     </script>
 </body>
 </html>
